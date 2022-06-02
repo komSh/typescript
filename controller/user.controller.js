@@ -64,6 +64,8 @@ module.exports.user_register = async (req, res) => {
 
 // USER LOGIN CONTROLLER
 module.exports.user_login = async (req, res) => {
+  res.send(req.body);
+  return ;
   const { email, password } = req.body;
   const user = await User.findOne({
     where: {
